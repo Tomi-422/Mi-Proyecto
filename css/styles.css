@@ -14,8 +14,9 @@ main section h1 {
 }
 
 body {
-    background-color: #EDEBD7;
-    min-height: 120vh;
+    background: #FFEFBA; 
+    background: -webkit-linear-gradient(to top, #FFFFFF, #FFEFBA);  
+    background: linear-gradient(to top, #FFFFFF, #FFEFBA); 
     margin: 0;
 }
 /* fin estilos generales*/

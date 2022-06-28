@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -28,7 +29,7 @@
     <!-- Main -->
     <main>
         <section>
-            <h1>Hacemos el mejor café</h1>
+            <h1 data-aos="zoom-in">Hacemos el mejor café</h1>
             <div class="inicio">
                 <!-- Imagen -->
                 <div class="inicio__img">
@@ -65,25 +66,25 @@
                 <div class="product__items">
                     <div>
                         <a href="">
-                            <img src="./assets/img/1.png" alt="" class="product__img">
+                            <img data-aos="flip-right" src="./assets/img/1.png" alt="" class="product__img">
                             <h4>Item1</h4>
                         </a>
                     </div>
                     <div>
                         <a href="">
-                            <img src="./assets/img/2.png" alt="" class="product__img">
+                            <img data-aos="flip-left" src="./assets/img/2.png" alt="" class="product__img">
                             <h4>Item2</h4>
                         </a>
                     </div>
                     <div>
                         <a href="">
-                            <img src="./assets/img/3.png" alt="" class="product__img">
+                            <img data-aos="flip-right" src="./assets/img/3.png" alt="" class="product__img">
                             <h4>Item3</h4>
                         </a>
                     </div>
                     <div>
                         <a href="">
-                            <img src="./assets/img/4.png" alt="" class="product__img">
+                            <img data-aos="flip-left" src="./assets/img/4.png" alt="" class="product__img">
                             <h4>Item4</h4>
                         </a>
                     </div>
@@ -121,7 +122,7 @@
                     </p>
                 </div>
                 <div class="call__button">
-                    <button>Contactanos!</button>
+                    <button data-aos="fade-up-right">Contactanos!</button>
                 </div>
             </div>
         </section>
@@ -150,6 +151,10 @@
         </div>
         <hr>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
