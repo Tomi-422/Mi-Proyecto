@@ -14,11 +14,18 @@ main section h1 {
 }
 
 body {
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     background: #FFEFBA; 
     background: -webkit-linear-gradient(to top, #FFFFFF, #FFEFBA);  
     background: linear-gradient(to top, #FFFFFF, #FFEFBA); 
+    min-height: 120vh;
     margin: 0;
 }
+
 /* fin estilos generales*/
 /* Inicio estilos header */
 .encabezado {
@@ -31,7 +38,6 @@ body {
     width: 220px;
     height: 220px;
     justify-content: center;
-
 }
 
 .encabezado__nav {
@@ -139,7 +145,9 @@ nav ul li a:hover {
 
 .servicios__logo img {
     flex-direction: row;
-    margin: 80px;
+    margin: 90px;
+    width: 80px;
+    height: 80px;
 }
 
 /* Main seccion Maquinas */
@@ -187,44 +195,47 @@ nav ul li a:hover {
 .gallery {
     display: grid;
     grid-gap: 5px;
-    grid-template-areas: 
-    'A'
-    'B' 
-    'C'
-    'D'   
-    'E';
+    grid-template-areas:
+        'A'
+        'B'
+        'C'
+        'D'
+        'E';
 }
-/* Medias query */ 
-@media (min-width: 576px) {
-    .gallery {
-      grid-template-columns: 1.52fr 1fr 1fr 1.525fr;
-      grid-template-areas:
-        'A  B  C  E'
-        'A  D  D  E';
-    } 
-  }
-/*  Gallery child img */
 
 img:nth-child(1) {
     grid-area: A;
-   }
-   img:nth-child(2) {
+}
+
+img:nth-child(2) {
     grid-area: B;
-   }
-   img:nth-child(3) {
+}
+
+img:nth-child(3) {
     grid-area: C;
-    height: 168px;
-   }
-   img:nth-child(4) {
+}
+
+img:nth-child(4) {
     grid-area: D;
-   }
-   img:nth-child(5) {
+}
+
+img:nth-child(5) {
     grid-area: E;
-   }
-   img {
-     width: 100%;
-     height: auto;
-   }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 576px) {
+    .gallery {
+        grid-template-columns: 1.52fr 1fr 1fr 1.525fr;
+        grid-template-areas:
+            'A  B  C  E'
+            'A  D  D  E';
+    }
+}
 /* Fin estilo Gallery */
 /* Inicio estilo product */
 .product {
@@ -347,7 +358,6 @@ form {
     float: left;
     width: 45%;
     margin-top: 3%;
-
 }
 
 .checkbox .input__check {
@@ -442,3 +452,166 @@ input {
 }
 
 /* fin estilo footer */
+/* Medias query */
+
+/*Tablet*/
+@media (max-width: 576px) {
+
+    /* Inicio estilos index*/
+
+    /* Inicio estilos header*/
+    h1 {
+        margin-left: 10px;
+
+    }
+
+    .encabezado {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+
+    }
+
+    .encabezado__img {
+        width: 150px;
+        height: 150px;
+
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 5px;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    /* Fin estilo header */
+    /* Main seccion Inicio */
+    .inicio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+    }
+
+    .inicio__img {
+        display: none;
+    }
+
+    .inicio__text {
+        margin-top: 10px;
+        width: 500px;
+        height: auto;
+        margin-left: 10px;
+        overflow-y: hidden;
+    }
+
+    /* Inicio estilo product Inicio */
+    .product {
+        margin-bottom: 35px;
+    }
+
+    .product__title {
+        text-align: center;
+        margin-top: 20px;
+
+    }
+
+    .product__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .product__items div a {
+        text-align: center;
+    }
+
+    /* Fin estilo product */
+    .call {
+        margin-top: 50px;
+    }
+
+    .call__text {
+        text-align: center;
+        margin: auto;
+        max-width: 500px;
+    }
+
+    .footer {
+        display: flex;
+
+    }
+
+    .footer__text1 p {
+        margin: 20px;
+        font-size: 0.8em;
+        margin-top: 80px;
+    }
+
+
+    /* Fin estilos index*/
+
+
+    /* Inicio estilos Empresa*/
+
+    .empresa {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .empresa__img {
+        width: 350px;
+        height: 350px;
+        margin-top: -20px;
+        margin-left: 5px;
+    }
+
+    .empresa__text {
+        margin-top: -25px;
+        margin-left: 85px;
+        width: 500px;
+        height: auto;
+        overflow-y: hidden;
+    }
+
+    /* Fin estilos Empresa*/
+
+    /* Inicio estilos Servicios*/
+
+    .servicios__logo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .servicios__logo img {
+        margin: 30px;
+    }
+
+    /* Fin estilos Servicios*/
+
+    /* Inicio estilos Maquinas*/
+
+    .maquinas__img img {
+
+        width: 560px;
+        height: auto;
+        margin-left: 10px;
+    }
+
+    /* Fin estilos Maquinas*/
+
+    /* Inicio estilos Contacto*/
+    /* Fin estilos Contacto*/
+
+}
